@@ -7,6 +7,10 @@ public class PlayerController : MonoBehaviour
     public GameObject player;
     private NavMeshAgent playerNavMeshAgent;
     public TextController textController;
+    public ItemCombine icBook;
+    public ItemCombine icGem;
+    public Animator playerAnimator;
+
     public bool isWalking;
     private string target;
     private bool first;
@@ -26,9 +30,11 @@ public class PlayerController : MonoBehaviour
 
         
         if(target != null && !isWalking && !first) {
-            initiateConversation(target);
+            InitiateConversation(target);
             target = null;
         }
+        
+        playerAnimator.SetBool("isWalking", isWalking);
     }
 
     private void LateUpdate()
@@ -42,18 +48,28 @@ public class PlayerController : MonoBehaviour
         if (EventSystem.current.IsPointerOverGameObject()) return;
         first = false;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Quaternion rotGoal;
+        float turnSpeed = 0.5f;
 
         if(Physics.Raycast(ray, out RaycastHit hit)) {
             Vector3 direction = (hit.point - player.transform.position).normalized;
-            player.transform.LookAt(direction);
+            //player.transform.LookAt(direction);
+            rotGoal = Quaternion.LookRotation(direction);
+            player.transform.rotation = Quaternion.Slerp(player.transform.rotation, rotGoal, turnSpeed);
             playerNavMeshAgent.SetDestination(hit.point);
             if(hit.transform.gameObject.tag == "Clickable") {
-                target = hit.transform.gameObject.name;
+                if(!icBook.itemClicked && !icGem.itemClicked) {
+                    target = hit.transform.gameObject.name;
+                } else {
+                    target = "SecondCombine";
+                    icBook.itemClicked = false;
+                    icGem.itemClicked = false;
+                }
             } else target = null;
         }
     }
 
-    private void initiateConversation(string target) {
+    private void InitiateConversation(string target) {
         textController.generateText(target);
     }
 }
