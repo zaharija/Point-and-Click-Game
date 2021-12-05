@@ -7,11 +7,14 @@ public class AudioController : MonoBehaviour
     public PlayerController player;
     public AudioClip dirt;
     public AudioClip wood;
+    public AudioClip door;
     private AudioSource audioSource;
+    private AudioSource effectSource;
 
     private void Awake()
     {
-        audioSource = GetComponent<AudioSource>();
+        audioSource = GetComponents<AudioSource>()[0];
+        effectSource = GetComponents<AudioSource>()[1];
         audioSource.clip = dirt;
     }
 
@@ -31,5 +34,10 @@ public class AudioController : MonoBehaviour
         if(!player.isWalking && audioSource.isPlaying) {
             audioSource.Stop();
         }
+    }
+
+    public void DoorOpenSound() {
+        print("Hello");
+        effectSource.Play();
     }
 }

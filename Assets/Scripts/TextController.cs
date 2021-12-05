@@ -8,10 +8,13 @@ public class TextController : MonoBehaviour
     private string textLake;
     private string textHouse;
     private string textCamper;
+    private string textDoor;
     private string textBook;
     private string textGem;
     private string textFirstCombine;
     private string textSecondCombine;
+
+    public AudioController ac;
 
     public GameObject player;
     private TextMesh playerMesh;
@@ -39,6 +42,10 @@ public class TextController : MonoBehaviour
                 break;
             case "HouseMesh":
                 StartCoroutine(generateText(2f, playerMesh, textHouse));
+                break;
+            case "DoorMesh":
+                ac.DoorOpenSound();
+                StartCoroutine(generateText(2f, playerMesh, textDoor));
                 break;
             case "Book":
                 StartCoroutine(generateText(2f, playerMesh, textBook));
@@ -79,6 +86,7 @@ public class TextController : MonoBehaviour
         textLake = "Misty as always.";
         textHouse = "Lights... someone must be home.";
         textCamper = "This rusty thing... Wonder who even owns it.";
+        textDoor = "Locked...";
         textBook = "\"Untitled\"... Hmm, a weird name for a book.";
         textGem = "Strange, I don't quite remember how I got this.";
         textFirstCombine = "How can I use this...";
