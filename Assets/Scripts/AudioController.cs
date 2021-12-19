@@ -37,7 +37,6 @@ public class AudioController : MonoBehaviour
     }
 
     public void DoorOpenSound() {
-        print("Hello");
         effectSource.Play();
     }
 }
