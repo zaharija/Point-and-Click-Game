@@ -13,7 +13,7 @@ public class TextController : MonoBehaviour
     private string textGem;
     private string textFirstCombine;
     private string textSecondCombine;
-
+    public DialogueControler dc;
     public AudioController ac;
 
     public GameObject player;
@@ -60,24 +60,7 @@ public class TextController : MonoBehaviour
                 StartCoroutine(generateText(2f, playerMesh, textSecondCombine));
                 break;
             case "NPCMesh":
-                 Wait(0.5f, () => {
-                    playerMesh.text = "Hey... Are you all right...";
-                    Wait(2f, () => {
-                        NPCMesh.text = "...ahhhh!";
-                        playerMesh.text = "";
-                        Wait(2f, () => {
-                            playerMesh.text = "Woah, woah... easy there, nobody is going to hurt you.";
-                            NPCMesh.text = "";
-                            Wait(3f, () => {
-                                NPCMesh.text = "AAAAA!";
-                                playerMesh.text = "";
-                                    Wait(4f, () => {
-                                        NPCMesh.text = "";
-                                });
-                            });
-                        });
-                    });
-                });
+                 dc.Init();
                 break;
         }
     }

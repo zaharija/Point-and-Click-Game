@@ -3,6 +3,7 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - AudioController
     - CameraController
+    - DialogueControler
     - ItemCombine
     - MouseBoxControler
     - OnHover
@@ -19,10 +20,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -116,6 +115,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 4392}
     - Class: 114
       Script: {instanceID: 4576}
+    - Class: 114
+      Script: {instanceID: 20246}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -727,7 +728,7 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAsset
   - hash:
       serializedVersion: 2
-      Hash: 2f248106f571ecfdf3247c51b2dab39a
+      Hash: 06a49dc34e9f2985047bb64820eddb18
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TextController
@@ -791,6 +792,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: 6c28ef7db3a350f7924d249b4430029f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DialogueControler
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

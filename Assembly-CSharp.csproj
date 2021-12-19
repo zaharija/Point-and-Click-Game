@@ -45,6 +45,7 @@
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\TextController.cs" />
      <Compile Include="Assets\Scripts\MouseBoxControler.cs" />
+     <Compile Include="Assets\Scripts\DialogueControler.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
