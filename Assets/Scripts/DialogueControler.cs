@@ -57,7 +57,7 @@ public class DialogueControler : MonoBehaviour
                 break;
             case 1:
                 index = 3;
-                dialogueText.text = "One hundred twenty three...";
+                dialogueText.text = "One hundred twenty six...";
                 choiceOne.text = "-- End Conversation --";
                 choiceTwo.text = "-- End Conversation --";
                 choiceThree.text = "-- End Conversation --";
@@ -79,7 +79,7 @@ public class DialogueControler : MonoBehaviour
                 break;
             case 1:
                 index = 3;
-                dialogueText.text = "One hundred twenty three...";
+                dialogueText.text = "One hundred twenty six...";
                 choiceOne.text = "-- End Conversation --";
                 choiceTwo.text = "-- End Conversation --";
                 choiceThree.text = "-- End Conversation --";
