@@ -43,7 +43,18 @@ public class DialogueControler : MonoBehaviour
         choiceOne.text = "Hello... what's going on?.";
         choiceTwo.text = "Are you all right?";
         choiceThree.text = "Hey, what are you counting.";
+        EnableButtons();
         gameObject.SetActive(false);
+    }
+
+    public void DisableButtons() {
+        buttonTwo.gameObject.SetActive(false);
+        buttonThree.gameObject.SetActive(false);
+    }
+
+    public void EnableButtons() {
+        buttonTwo.gameObject.SetActive(true);
+        buttonThree.gameObject.SetActive(true);
     }
 
     private void oneClick() {
@@ -61,6 +72,7 @@ public class DialogueControler : MonoBehaviour
                 choiceOne.text = "-- End Conversation --";
                 choiceTwo.text = "-- End Conversation --";
                 choiceThree.text = "-- End Conversation --";
+                DisableButtons();
                 break;
             case 3:
                 Disable();
@@ -83,6 +95,7 @@ public class DialogueControler : MonoBehaviour
                 choiceOne.text = "-- End Conversation --";
                 choiceTwo.text = "-- End Conversation --";
                 choiceThree.text = "-- End Conversation --";
+                DisableButtons();
                 break;
             case 3:
                 Disable();
@@ -105,6 +118,7 @@ public class DialogueControler : MonoBehaviour
                 choiceOne.text = "-- End Conversation --";
                 choiceTwo.text = "-- End Conversation --";
                 choiceThree.text = "-- End Conversation --";
+                DisableButtons();
                 break;
             case 3:
                 Disable();

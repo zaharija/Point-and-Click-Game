@@ -112,11 +112,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2982}
     - Class: 114
-      Script: {instanceID: 4392}
+      Script: {instanceID: 3646}
     - Class: 114
-      Script: {instanceID: 4576}
+      Script: {instanceID: 4394}
     - Class: 114
-      Script: {instanceID: 20246}
+      Script: {instanceID: 4578}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -602,6 +602,12 @@ ScriptsOnlyBuild:
     className: Dropdown
   - hash:
       serializedVersion: 2
+      Hash: 6c28ef7db3a350f7924d249b4430029f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DialogueControler
+  - hash:
+      serializedVersion: 2
       Hash: a5781dc71a671b1ad2b38de19f24b71f
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -792,12 +798,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
-  - hash:
-      serializedVersion: 2
-      Hash: 6c28ef7db3a350f7924d249b4430029f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: DialogueControler
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

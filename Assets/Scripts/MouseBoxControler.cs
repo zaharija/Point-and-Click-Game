@@ -18,7 +18,7 @@ public class MouseBoxControler : MonoBehaviour
     void Update() {
         Vector2 mp = Input.mousePosition;
         mp.x -= 1000;
-        mp.y -= 400;
+        mp.y -= 410;
         transform.localPosition = mp;
     }
 
